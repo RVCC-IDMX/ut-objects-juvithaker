@@ -88,7 +88,8 @@ const colorHexCodes = {
  * must use colorHexCodes as a lookup table
  */
 function getColorValue(color) {
-  // write your code here & return value
+  const colorValue = color.toLowerCase();
+  return colorHexCodes[colorValue];
 }
 
 /**
@@ -109,7 +110,8 @@ function getColorValue(color) {
  * Or - https://mzl.la/3DnsESS
  */
 function testForColor(color) {
-  // write your code here & return value
+  const colorName = color.toLowerCase();
+  return colorHexCodes.hasOwnProperty(colorName);
 }
 
 module.exports = {
